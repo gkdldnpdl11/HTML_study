@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			/* display: none 은 아예 사라지는것이고 visibility: hidden은 눈에만 안보이고 공간은 존재하는 것임 */
+			hr {visibility: hidden;}
+		</style>
+	</head>
+	<body>
+		<h1>여러 데이터 나열하기</h1>
+		<form action="#">
+			<label for="prod1">상품 선택</label>
+			<select id="prod1" name="prod1">
+				<option>::선택하세요::</option>
+				<option value="s3">선물용 3kg</option>
+				<option value="s5">선물용 5kg</option>
+				<option value="f3">가정용 3kg</option>
+				<option value="f5">가정용 5kg</option>
+			</select>
+			<hr>
+			
+			<label for="prod2">상품 선택2</label>
+			<select id="prod2" name="prod2" multiple>
+				<option value="s3">선물용 3kg</option>
+				<option value="s5">선물용 5kg</option>
+				<option value="f3">가정용 3kg</option>
+				<option value="f5">가정용 5kg</option>
+			</select>
+			<hr>
+			<label for="prod3">포장 여부</label>
+			<input type="text" id="prod3" name="prod3" list="packing">
+			<datalist id="packing">
+				<option>선물 포장</option>
+				<option>선물 포장 안함</option>
+			</datalist>
+		</form>
+	</body>
+</html>

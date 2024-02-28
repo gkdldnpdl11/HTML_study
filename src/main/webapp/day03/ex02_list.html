@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>list : ol, ul, dl</title>
+	</head>
+	<body>
+		<!-- 
+			ol(ordered list) : 순서가 있는 리스트
+			ul(unordered list) : 순서가 없는 리스트
+			dl(description list) : 정의 목록, 사전이나 정의 문구에 사용함
+			
+				ul과 ol 태그 안에는 li 태그(항목, list)가 존재함
+				ul : 기본 모양(disc)과 circle, square, none 있다
+				dl 태그 안에는 dt(제목), dd(설명)이 존재한다
+				
+				스타일 변경 형식) style="list-style-type: value";
+		 -->
+		 
+		 <ul>
+		 	<li>Coffee</li>
+		 	<li>Tea</li>
+		 	<li>Milk</li>
+		 </ul>
+		 <hr>
+		 
+		 <ul style="list-style-type: circle;">
+		 	<li>Coffee</li>
+		 	<li>Tea</li>
+		 	<li>Milk</li>
+		 </ul>
+		 <hr>
+		 
+		 <ul style="list-style-type: square;">
+		 	<li>Coffee</li>
+		 	<li>Tea</li>
+		 	<li>Milk</li>
+		 </ul>
+		 <hr>
+		 
+		 <ul style="list-style-type: none;">
+		 	<li>Coffee</li>
+		 	<li>Tea</li>
+		 	<li>Milk</li>
+		 </ul>
+		 <hr>
+		 
+		 <!-- unordered list 이지만 숫자로 표기하는 decimal을 사용해도 오류가 나지 않는다 -->
+		 <ul style="list-style-type: decimal;">
+		 	<li>Coffee</li>
+		 	<li>Tea</li>
+		 	<li>Milk</li>
+		 </ul>
+		 <hr>
+		 
+		 <ul style="list-style-type: square;;">
+		 	<li>Coffee
+		 		<ul>
+		 			<li>hot
+		 				<ul>
+		 					<li>S</li>
+		 					<li>M</li>
+		 					<li>L</li>
+		 				</ul>
+		 			</li>
+		 			<li>cold
+		 				<ul>
+		 					<li>S</li>
+		 					<li>M</li>
+		 					<li>L</li>
+		 				</ul>
+		 			</li>
+		 		</ul>
+		 	</li>
+		 	<li>Tea</li>
+		 	<li>Milk</li>
+		 </ul>
+		 <hr>
+		 
+		 <ol>
+		 	<li>Coffee
+		 		<ol>
+		 			<li>hot
+						<ol>
+							<li>S</li>
+							<li>M</li>
+							<li>L</li>
+						</ol>
+					</li>
+					<li>cold
+						<ol>
+							<li>S</li>
+							<li>M</li>
+							<li>L</li>
+						</ol>
+					</li>
+		 		</ol>
+		 	</li>
+		 	<li>Tea</li>
+		 	<li>Milk</li>
+		 </ol>
+		 <hr>
+		 
+		 <dl>
+		 	<dt>키보드</dt>
+		 	<dd>표준 입력 장치</dd>
+		 	
+		 	<dt>모니터</dt>
+		 	<dd>표준 출력 장치</dd>
+		 </dl>
+		 <hr>
+		 
+	</body>
+</html>

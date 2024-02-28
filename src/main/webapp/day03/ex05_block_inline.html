@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Block and Inline</title>
+		<style type="text/css">
+			/* mycontainer class 안에 있는 div들 이라는 의미임 */
+			.mycontainer div {
+				float: left;
+				width: 33%
+			}
+			.mycontainer{
+				width: 100%;
+				overflow: auto;
+			}
+			
+			.mycontainer2 div{display: inline-block;}
+			
+			.mycontainer3{display: flex;}
+			
+			.mycontainer4{
+				display: grid;
+				grid-template-columns: 33% 33% 33%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+			block level element : 항상 새 줄에서 시작하며, 전체 넓이를 차지한다
+				-- <div>, <p>, <h1>~<h6>, <table>, <form>, <ul>, <hr>
+			
+			inline level element : 필요한 만큼만 넓이를 차지한다
+				-- <span>, <input>, <button>, <label>, <a>
+			
+			** 인라인 요소에는 블록 요소가 포함 될 수 없다(오류는 안나고 경고창이 뜸) 
+		 -->
+		 
+		 <!-- div : 다른 요소(태그)들을 포함하는 컨테이너 역할을 한다
+		 					또는 영역을 나누는 역할을 한다
+		 					영역의 크기를 지정하면 그 크기에 맞춰서 문구를 작성한다
+			 				일정 영역(몇줄이 되든 상관없음)의 블록을 생성한다
+			 				블록레벨이기 때문에 여유 공간이 있어서 가능하다. 인라인레벨에서는 안됨 -->
+		 <div style="background-color: lime;">Hello World</div><br>
+		 <span style="background-color: lime;">Hello World</span><br>
+		 <hr>
+		 
+		 <div style="background-color: silver; width: 400px;">
+		 	<h2>London</h2>
+  			<p>London is the capital city of England.
+  			London is the capital city of England.
+  			London is the capital city of England.</p>
+  			<p>London has over 13 million inhabitants.
+  			London has over 13 million inhabitants.
+  			London has over 13 million inhabitants.</p>
+		 </div>
+		 <hr>
+		 
+		 <!-- 수직으로 출력 -->
+		<h1>Multiple DIV Elements</h1>
+		<div style="background-color:#FFF4A3;">
+  		<h2>London</h2>
+  		<p>London is the capital city of England.</p>
+ 		 <p>London has over 13 million inhabitants.</p>
+		</div>
+
+		<div style="background-color:#FFC0C7;">
+  		<h2>Oslo</h2>
+  		<p>Oslo is the capital city of Norway.</p>
+  		<p>Oslo has over 600.000 inhabitants.</p>
+		</div>
+
+		<div style="background-color:#D9EEE1;">
+  		<h2>Rome</h2>
+  		<p>Rome is the capital city of Italy.</p>
+  		<p>Rome has almost 3 million inhabitants.</p>
+		</div>
+		<hr>
+		 
+		 <!-- 클래스를 사용하여 모아주고 float를 사용하여 왼쪽으로 붙여서 출력 -->
+		<h1>Multiple DIV Elements2 - float</h1>
+		<div class="mycontainer">
+			<div style="background-color:#FFF4A3;">
+  			<h2>London</h2>
+  			<p>London is the capital city of England.</p>
+ 		 	<p>London has over 13 million inhabitants.</p>
+			</div>
+
+			<div style="background-color:#FFC0C7;">
+  			<h2>Oslo</h2>
+  			<p>Oslo is the capital city of Norway.</p>
+	  		<p>Oslo has over 600.000 inhabitants.</p>
+			</div>
+
+			<div style="background-color:#D9EEE1;">
+  			<h2>Rome</h2>
+  			<p>Rome is the capital city of Italy.</p>
+  			<p>Rome has almost 3 million inhabitants.</p>
+			</div>
+		</div>
+		<br>
+		
+		<h1>Multiple DIV Elements3 - display</h1>
+		<div class="mycontainer2">
+			<div style="background-color:#FFF4A3;">
+  			<h2>London</h2>
+  			<p>London is the capital city of England.</p>
+ 		 	<p>London has over 13 million inhabitants.</p>
+			</div>
+
+			<div style="background-color:#FFC0C7;">
+  			<h2>Oslo</h2>
+  			<p>Oslo is the capital city of Norway.</p>
+	  		<p>Oslo has over 600.000 inhabitants.</p>
+			</div>
+
+			<div style="background-color:#D9EEE1;">
+  			<h2>Rome</h2>
+  			<p>Rome is the capital city of Italy.</p>
+  			<p>Rome has almost 3 million inhabitants.</p>
+			</div>
+		</div>
+		<br>
+		
+		<h1>Multiple DIV Elements4 - flexbox</h1>
+		<div class="mycontainer3">
+			<div style="background-color:#FFF4A3;">
+  			<h2>London</h2>
+  			<p>London is the capital city of England.</p>
+ 		 	<p>London has over 13 million inhabitants.</p>
+			</div>
+
+			<div style="background-color:#FFC0C7;">
+  			<h2>Oslo</h2>
+  			<p>Oslo is the capital city of Norway.</p>
+	  		<p>Oslo has over 600.000 inhabitants.</p>
+			</div>
+
+			<div style="background-color:#D9EEE1;">
+  			<h2>Rome</h2>
+  			<p>Rome is the capital city of Italy.</p>
+  			<p>Rome has almost 3 million inhabitants.</p>
+			</div>
+		</div>
+		<br>
+		
+		<h1>Multiple DIV Elements5 - grid</h1>
+		<div class="mycontainer4">
+			<div style="background-color:#FFF4A3;">
+  			<h2>London</h2>
+  			<p>London is the capital city of England.</p>
+ 		 	<p>London has over 13 million inhabitants.</p>
+			</div>
+
+			<div style="background-color:#FFC0C7;">
+  			<h2>Oslo</h2>
+  			<p>Oslo is the capital city of Norway.</p>
+	  		<p>Oslo has over 600.000 inhabitants.</p>
+			</div>
+
+			<div style="background-color:#D9EEE1;">
+  			<h2>Rome</h2>
+  			<p>Rome is the capital city of Italy.</p>
+  			<p>Rome has almost 3 million inhabitants.</p>
+			</div>
+		</div>
+		<br>
+	</body>
+</html>

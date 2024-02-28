@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form - fieldset</title>
+		<style type="text/css">
+			#container{
+				width: 600px; margin: 10px auto;
+			}
+			fieldset {padding: 15px;}
+			legend {font-weight: bold;}
+			ul {list-style-type: none; padding-left: 0px;}
+			li label{width: 120px; float: left; text-align: left;}
+			li {margin: 10px;}
+		</style>
+	</head>
+	<body>
+		<form action="#" method="get" style="background-color: white;">
+			<!-- form 테두리  -->
+			<fieldset>
+				<legend>Log In</legend>
+					<label for="id">ID : <input type="text" id=id name="id"></label> 
+     				<label for="pw">PW : <input type="password" id=pw name="pw"></label>
+     				<input type="submit" value="Log In">
+     		</fieldset>
+		</form>
+		<hr>
+		<br><br><br><br><br><br>
+		
+		<div id="container">
+		<h1>회원 가입을 환영합니다</h1>
+		<form action="#" method="get">
+		<fieldset>
+			<legend>사용자 정보</legend>
+			<ul>
+				<li>
+					<label for="id">아이디 </label>
+					<input type="text" id="id" name="id" maxlength="10" placeholder="4자 ~ 10자 사이, 공백없이" required>
+				</li>
+				<li>
+					<label for="email">이메일 </label>
+					<input type="text" id="email" name="email" required>
+				</li>
+				<li>
+					<label for="pw">비밀번호 </label>
+					<input type="password" id="pw" name="pw" placeholder="문자와 숫자, 특수 기호 포함" required>
+				</li>
+				<li>
+					<label for="check">비밀번호 확인 </label>
+					<input type="password" id="check" name="check" required>
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>이벤트와 새로운 소식</legend>
+					<input type="radio" name="mailing" id="agree" value="y">메일 수신
+					<input type="radio" name="mailing" id="disagree" value="n" checked>메일 수신 안 함
+		</fieldset>
+		<input type="submit" value="가입하기">
+		<input type="reset" value="취소">
+		</form>
+		</div>
+	</body>
+</html>

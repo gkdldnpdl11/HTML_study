@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ul 태그를 이용한 메뉴 만들기</title>
+		<style type="text/css">
+			ul {
+				list-style-type: none;		/* 앞에 있는 점 삭제 */
+				background-color: #777777;
+				overflow: hidden;
+				padding: 0px;
+				margin: 0 auto;
+			}
+			
+			li{float: left;}
+			
+			a {
+				text-decoration: none;	/* ul안에 글자들의 밑줄 삭제 */
+				display: block;				/* li 별로 칸을 나눠줌 */
+				padding: 10px 20px;
+				color: white;
+			}
+			a:hover {
+				background-color: #333333;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>네비게이션 메뉴</h2>
+		<p>In this example, navigation menu!</p>
+		
+		<ul>
+			<li><a href="https://www.naver.com" target="_blank">Naver</a></li>
+			<li><a href="https://www.google.com" target="_blank">Google</a></li>
+			<li><a href="https://daum.net" target="_blank">Daum</a></li>
+			<li><a href="https://www.naver.com" target="_blank">Naver</a></li>
+		</ul>
+	</body>
+</html>

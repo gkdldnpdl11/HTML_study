@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>tables</title>
+		<style type="text/css">
+			table {width: 60%;}
+			table, th, td {
+				border: 1px solid green;
+				/* border 한줄로 만들기 */
+				border-collapse: collapse;
+			}
+			
+			/* table 자체를 가운데 정렬, 일단 넓이가 있어야 된다 */
+			table{margin: 0px auto;}	/* 0px = 상하 , auto = 좌우 */
+			
+			/* 글자 가운데 정렬 및 내부 크기*/
+			td {text-align: center;}
+			td, th {padding: 5px;}
+		</style>
+	</head>
+	<body>
+		<!-- 
+			table 태그 안에서 사용하는 태그들
+				- thead 태그 : 테이블의 머리글, 생략 가능 
+				- tbody 태그 : 테이블의 본문
+				- tfoot 태그 : 테이블의 꼬리글, 생략 가능
+					
+				- tr 태그 : 행
+					: th, td : tr(행)안에 존재하는 하나의 컬럼
+						- th 태그 : 굵게, 가운데 정렬이 자동, 보통 제목에 사용한다
+						- td 태그 : 일반 컬럼에 사용한다
+			
+			테이블 테두리를 지정하지 않으면 테이블 테두리는 나타나지 않는다
+			style로 넓이와 테두리를 지정한다
+			
+			형식)
+			<table>
+				<thead>
+					<tr><th>내용</th><th>내용</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>내용</td><td>내용</td></tr>
+				</tbody>
+				<tfoot>
+					<tr><td>내용</td><td>내용</td></tr>
+				</tfoot>
+			</table>
+		 -->
+		 <table>
+		 	<thead>
+		 		<tr><th>용도</th><th>중량</th><th>개수</th><th>가격</th></tr>
+		 	</thead>
+		 	<tbody>
+		 		<tr><td>선물용</td><td>3kg</td><td>11~16과</td><td>35,000원</td></tr>
+		 		<tr><td>선물용</td><td>5kg</td><td>18~26과</td><td>52,000원</td></tr>
+		 		<tr><td>가정용</td><td>3kg</td><td>11~16과</td><td>30,000원</td></tr>
+		 		<tr><td>가정용</td><td>5kg</td><td>18~26과</td><td>47,000원</td></tr>
+		 	</tbody>
+		 </table>
+		 <hr>
+		 
+		 <!-- thead 와 tbody의 위치가 바뀌어도 결과로 나오는 테이블은 바뀌지 않는다 -->
+		 <table>
+		 	<tbody>
+		 		<tr><td>선물용</td><td>3kg</td><td>11~16과</td><td>35,000원</td></tr>
+		 		<tr><td>선물용</td><td>5kg</td><td>18~26과</td><td>52,000원</td></tr>
+		 		<tr><td>가정용</td><td>3kg</td><td>11~16과</td><td>30,000원</td></tr>
+		 		<tr><td>가정용</td><td>5kg</td><td>18~26과</td><td>47,000원</td></tr>
+		 	</tbody>
+		 	<thead>
+		 		<tr><th style="width: 25%;">용도</th><th style="width: 25%;">중량</th>
+		 		<th style="width: 25%;">개수</th><th style="width: 25%;">가격</th></tr>
+		 	</thead>
+		 </table>
+		 <hr>
+		 
+		 <table>
+		 <!-- 이 테이블에서의 th는 thead가 아니고 tbody이다 그러므로 위치를 변경하는대로 바뀜 -->
+		 	<tr><td>선물용</td><td>3kg</td><td>11~16과</td><td>35,000원</td></tr>
+		 	<tr><th>용도</th><th>중량</th><th>개수</th><th>가격</th></tr>
+		 	<tr><td>선물용</td><td>5kg</td><td>18~26과</td><td>52,000원</td></tr>
+		 	<tr><td>가정용</td><td>3kg</td><td>11~16과</td><td>30,000원</td></tr>
+		 	<tr><td>가정용</td><td>5kg</td><td>18~26과</td><td>47,000원</td></tr>
+		 </table>
+		 <hr>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML style 속성(attribute)</title>
+	</head>
+	<body>
+		<!-- 
+			<시작태그 속성="값"> 단일 값
+			<시작태그 속성="값" 속성="값"> 여러개일 경우 한칸 띄우고 작성
+			<시작태그 style="속성:값;">
+			<시작태그 style="속성:값;" style="속성:값;" style="속성:값;">
+			HTML에서 속성 attribute, CSS에서는 속성 property
+		 -->
+		 <!-- style 속성을 이용해서 글자색(color), 배경색(background-color) 삽입 -->
+		 <h1 style="background-color: red; color: aqua;" >한국 ICT 인재 개발원</h1>
+		 <p style="color: red; font-size: 20px;">웹 개발자 양성 과정</p>
+		 <span style="background-color: aqua; font-size: 20px;">23.12.28~24.07.10</span>
+		 <hr>
+		 <!-- 
+		 	fonts : font-weight(굵기), font-family(글꼴), font-size(크기)
+		 				font-style(스타일), text-align(정렬)
+			font-family(글꼴) : 사용 안함, 나중에 web-font를 배운다(웹에서 지원하는 폰트)
+			text-align(정렬) : 인라인 레벨에서는 의미가 없다(여유 영역이 없으므로 정렬이 안됨)
+												블록 레벨은 여유 영역이 있으므로 정렬 가능
+			font-weight : bold => 굵게
+			font-style : italic => 기울임
+			text-decoration : 글자 꾸미기
+										underline, overline, none, line-through
+		  -->
+		 <p style="font-size: 20px">한국 ICT 인재 개발원</p>
+		 <p style="font-size: 20px; font-weight: bold;">한국 ICT 인재 개발원</p>
+		 <p style="font-size: 20px">한국 ICT 인재 개발원</p>
+		 <p style="font-size: 20px; font-style: italic;">한국 ICT 인재 개발원</p>
+		 <hr>
+		 
+		 <p style="text-align: center;">한국 ICT 인재 개발원</p>
+		 <p style="text-align: right;">한국 ICT 인재 개발원</p>
+		 <p>한국 ICT 인재 개발원</p>
+		 <span style="text-align: center;">한국 ICT 인재 개발원 / 인라인 레벨이라서 가운데 정렬 안됨</span>
+		 <hr>
+		 
+		 <p style="text-decoration: underline;">한국 ICT 인재 개발원</p>
+		 <p style="text-decoration: overline;">한국 ICT 인재 개발원</p>
+		 <p style="text-decoration: none;">한국 ICT 인재 개발원(style 삭제)</p>
+		 <p style="text-decoration: line-through;">한국 ICT 인재 개발원</p>
+	</body>
+</html>
